@@ -44,7 +44,6 @@ class Bottleneck(nn.Module):
         out = self.conv1(x)
         out = self.conv2(out)
         out = self.conv3(out)
-
         out += self.shortcut(residual)
         out = F.relu(out)
         return out
